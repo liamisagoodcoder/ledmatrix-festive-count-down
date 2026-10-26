@@ -1,0 +1,25 @@
+{
+  "id": "festive-countdown",
+  "name": "Festive Countdown",
+  "version": "1.0.0",
+  "author": "liamisagoodcoder",
+  "description": "Animated Christmas countdown: falling snow, a snowman, a twinkling tree and Santa's sleigh flying past. Designed for 128x32 (two 64x32 panels).",
+  "category": "holiday",
+  "tags": [
+    "christmas",
+    "countdown",
+    "holiday",
+    "seasonal",
+    "animated"
+  ],
+  "entry_point": "manager.py",
+  "class_name": "FestiveCountdownPlugin",
+  "display_modes": [
+    "festive-countdown"
+  ],
+  "compatible_versions": [
+    ">=2.0.0"
+  ],
+  "update_interval": 3600,
+  "default_duration": 20
+}

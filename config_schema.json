@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Festive Countdown",
+  "description": "Animated countdown to Christmas with snow, a snowman, a tree and Santa's sleigh.",
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Show the Festive Countdown in the rotation"
+    },
+    "display_duration": {
+      "type": "number",
+      "default": 20,
+      "minimum": 5,
+      "maximum": 300,
+      "description": "How long the countdown stays on screen each time (seconds)"
+    },
+    "number_color": {
+      "type": "array",
+      "x-widget": "color-picker",
+      "items": {"type": "integer", "minimum": 0, "maximum": 255},
+      "minItems": 3,
+      "maxItems": 3,
+      "default": [220, 15, 25],
+      "description": "Colour of the big countdown number (default: red)"
+    },
+    "label_color": {
+      "type": "array",
+      "x-widget": "color-picker",
+      "items": {"type": "integer", "minimum": 0, "maximum": 255},
+      "minItems": 3,
+      "maxItems": 3,
+      "default": [255, 190, 30],
+      "description": "Colour of the DAYS TO GO text (default: gold)"
+    },
+    "show_sleigh": {
+      "type": "boolean",
+      "default": true,
+      "description": "Santa's sleigh flies across the sky"
+    },
+    "sleigh_every_seconds": {
+      "type": "integer",
+      "default": 30,
+      "minimum": 10,
+      "maximum": 300,
+      "description": "How often the sleigh flies past (seconds)"
+    },
+    "snowflakes": {
+      "type": "integer",
+      "default": 34,
+      "minimum": 0,
+      "maximum": 100,
+      "description": "How many snowflakes are falling (0 turns the snow off)"
+    },
+    "show_snowman": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show the snowman on the left"
+    },
+    "show_tree": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show the Christmas tree on the right"
+    },
+    "animation_fps": {
+      "type": "integer",
+      "default": 30,
+      "minimum": 5,
+      "maximum": 60,
+      "description": "Animation frames per second. Lower it if the Pi struggles.",
+      "x-advanced": true
+    }
+  }
+}
